@@ -40,6 +40,8 @@ public class ClassInitializer {
     }
 
     public static void main(String[] args) {
-        new ClassInitializer();
+        new ClassInitializer() {{
+            System.out.println("\ninstance init 3");
+        }};
     }
 }
