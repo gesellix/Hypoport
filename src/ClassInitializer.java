@@ -30,6 +30,10 @@ public class ClassInitializer {
     private List<String> elements = new ArrayList<String>() {{
         add("element1");
         add("element2");
+
+        // implicitly, we've got a reference to the outer Object, so we can write something like below,
+        // but the reference to an outer class can lead to memory leaks!
+        System.out.println("outer class: " + ClassInitializer.this.getClass());
     }};
 
     public ClassInitializer() {
